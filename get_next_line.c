@@ -6,7 +6,7 @@
 /*   By: rpunet <rpunet@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 13:22:30 by rpunet            #+#    #+#             */
-/*   Updated: 2020/07/25 19:38:17 by rpunet           ###   ########.fr       */
+/*   Updated: 2020/07/25 19:54:00 by rpunet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	get_next_line(int fd, char **line)
 	return (1);
 
 }
-
+/*
  int		main(void)
 {
 	char	*line;
@@ -155,7 +155,7 @@ int	get_next_line(int fd, char **line)
 }
 
 
-
+ */
 
 
 
