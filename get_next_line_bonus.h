@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpunet <rpunet@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 17:34:02 by rpunet            #+#    #+#             */
-/*   Updated: 2020/07/27 16:57:51 by rpunet           ###   ########.fr       */
+/*   Updated: 2020/07/27 16:57:42 by rpunet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE
-# define GET_NEXT_LINE
+#ifndef GET_NEXT_LINE_BONUS
+# define GET_NEXT_LINE_BONUS
 
 #include <stdio.h>
 #include <fcntl.h>

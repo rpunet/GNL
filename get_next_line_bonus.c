@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rpunet <rpunet@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 13:22:30 by rpunet            #+#    #+#             */
-/*   Updated: 2020/07/27 16:58:12 by rpunet           ###   ########.fr       */
+/*   Updated: 2020/07/27 16:57:17 by rpunet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_line_save(char *save, char **line)
 {
@@ -80,7 +80,7 @@ int	get_next_line(int fd, char **line)
 	}
 	return (1);
 }
-
+/*
  int		main(void)
 {
 	char	*line;
@@ -111,4 +111,4 @@ int	get_next_line(int fd, char **line)
 }
 
 
-
+ */
