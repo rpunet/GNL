@@ -6,7 +6,7 @@
 /*   By: rpunet <rpunet@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 17:53:00 by rpunet            #+#    #+#             */
-/*   Updated: 2020/07/27 16:54:45 by rpunet           ###   ########.fr       */
+/*   Updated: 2020/07/27 22:07:14 by rpunet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*dst;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
@@ -78,23 +79,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	if (!(dst = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	ft_memcpy(dst, &s[start], len);
-	dst[len] = '\0';
-	return (dst);
-}
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	size_t i;
-
 	i = 0;
-	if (n == 0 || dst == src)
-		return (dst);
-	while (i < n)
+	while (i < len)
 	{
-		((char *)dst)[i] = ((char *)src)[i];
+		dst[i] = s[start];
 		i++;
+		start++;
 	}
+	dst[len] = '\0';
 	return (dst);
 }
 
@@ -106,4 +98,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-
