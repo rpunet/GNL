@@ -6,7 +6,7 @@
 /*   By: rpunet <rpunet@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 17:34:02 by rpunet            #+#    #+#             */
-/*   Updated: 2020/07/24 16:06:06 by rpunet           ###   ########.fr       */
+/*   Updated: 2020/07/27 16:03:05 by rpunet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define FD_MAX 4096
+#define FD_MAX 4
 
 #ifndef BUFFER_SIZE
-# define BUFFER_SIZE 100000
+# define BUFFER_SIZE 8
 #endif
 
 int		get_next_line(int fd, char **line);

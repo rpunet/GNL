@@ -6,7 +6,7 @@
 /*   By: rpunet <rpunet@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 17:53:00 by rpunet            #+#    #+#             */
-/*   Updated: 2020/07/24 11:59:45 by rpunet           ###   ########.fr       */
+/*   Updated: 2020/07/27 12:03:51 by rpunet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	if (s1 == NULL || s2 == NULL)
-		return (NULL);
+		return (ft_strdup(""));
 	ret = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)) + 1);
 	if (!ret)
 		return (NULL);

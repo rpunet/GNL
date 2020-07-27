@@ -6,7 +6,7 @@
 /*   By: rpunet <rpunet@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 13:22:30 by rpunet            #+#    #+#             */
-/*   Updated: 2020/07/27 11:17:51 by rpunet           ###   ########.fr       */
+/*   Updated: 2020/07/27 16:18:17 by rpunet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char	*ft_line_save(char *save, char **line)
 	else
 	{
 		*line = save;
+		//free(save);
 		save = NULL;
 	}
 	return (save);
@@ -42,7 +43,7 @@ char	*ft_buff_save(char *save, char *buffer)
 
 	if (!save)
 		save = ft_strdup(buffer);
-	else
+	else if (save)
 	{
 		aux = save;
 		save = ft_strjoin(save, buffer);
@@ -69,22 +70,18 @@ int	get_next_line(int fd, char **line)
 	free (buffer);
 	if (byte <= 0 && !save[fd])
 	{
-		free(save[fd]);
+		//free(save[fd]);
 		*line = ft_strdup("");
-		free(*line);
 		return (byte);
 	}
 
 	save[fd] = ft_line_save(save[fd], line);
 	if (byte == 0 && !save[fd])
 	{
-		free(save[fd]);
-		free(*line);
+		//free(save[fd]);
 		return (0);
 	}
-	free(save[fd]);
-	//free(*line);
-
+	//free(save[fd]);
 	return (1);
 
 }
@@ -98,18 +95,24 @@ int	get_next_line(int fd, char **line)
 
 	// line = "hello world";
 
-	fd = open("text.txt", O_RDONLY);
+	if ((fd = open("files/alphabet", O_RDONLY)) < 0)
+		printf("error in open\n");
 	// fd2 = open("text2.txt", O_RDONLY);
 	// fd3 = open("text2.txt", O_RDONLY);
 	// while (get_next_line(fd, &line))
 	// 	printf("%s\n\n\n\n\n", line);
 
-	 get_next_line(fd, &line);
-	 printf("%s\n\n\n\n", line);
-	 free (line);
+	while (get_next_line(fd, &line))
+		printf("%s\n--------------------------------------\n", line);
 
-	// get_next_line(fd, &line);
-	//  printf("%s\n", line);
+
+
+
+	//  get_next_line(fd, &line);
+	//   printf("%s\n", line);
+
+
+	free (line);
 	// 	get_next_line(fd, &line);
 	// printf("%s\n", line);
 	// 	get_next_line(fd, &line);
