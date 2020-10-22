@@ -15,4 +15,4 @@ static variables.
 - We consider that get_next_line has an undefined behavior if, between two calls, the same file descriptor switches to a different file before EOF has been reached on the first fd.
 - lseek is not an allowed function. File reading must be done only once.
 - Finally we consider that get_next_line has an undefined behavior when readingfrom a binary file. However, if you wish, you can make this behavior coherent.
-- Global variables are forbidden.
+- Global variables are forbidden. 
